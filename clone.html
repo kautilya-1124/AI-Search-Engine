@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Image Gallery</title>
+    <link rel="icon" href="images/logo.png">
+ <link rel="stylesheet" href="search.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!-- ================container start====================== -->
+    <div class="container">
+          <!-- =====================nav bar start================ -->
+          <header>
+            <div class="head-left">
+                <img src="images/logo.png" alt="logo">
+               <a href="index.html"> <h1>IMG.COM</h1></a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="clone.html">MAIN</a></li>
+                <li><a href="random.html">RANDOM CLICK</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <div class="head-right">
+                <a href="#">NEW ACOUNT</a>
+
+                <div class="button-box">
+                    <button id="signinButton">SIGN IN</button>
+                </div>
+            </div>
+
+            <div class="menu-icon">
+                <i class='bx bx-menu'></i>
+            </div>
+        </header>
+
+        <!-- ===========================nav bar end================= -->
+        <!-- ================sidebar start====================== -->    
+        <div class="sidebar">
+            <div class="close-icon">
+                <i class='bx bx-x'></i>
+            </div>
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="clone.html">MAIN</a></li>
+                <li><a href="random.html">RANDOM CLICK</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <div class="social-sidebar">
+                <a href="#"><i class='bx bxl-discord-alt' ></i></a>
+                <a href="#"><i class='bx bxl-youtube' ></i></a>
+                <a href="#"><i class='bx bxl-github' ></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+            </div>
+
+            <div class="button-box">
+                <button id="signinButton">SIGN IN</button>
+            </div>
+        </div>
+        <!-- ================sidebar end====================== -->
+        <!-- ================main start====================== -->
+        <div  id="main">
+
+        <canvas class="threejs-canvas"></canvas>
+        <h1 style="margin-top: 10%; "> AI Image Generator Tool JavaScript</h1>
+            <h3>Connect your text into an image with a second using this<br> JavaScript-powered <br> AI Image Generator tool.</h3>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search for images...">
+            
+            <button id="searchButton" >Search</button>
+        </div>
+        <div id="gallery"></div>
+
+        <div id="signinPage" class="signin-page-box">
+            <div class="signin-page">
+                <h1>Sign In</h1>
+                <input type="search" placeholder="User Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Sign in</button>
+                <p>Login</p>
+                <div id="closeIcon"><i class='bx bx-x'></i></div>
+            </div>
+        </div>
+    </div>
+    <!-- ================main end====================== -->
+     <!-- ======================footer start==================== -->
+
+        <footer style="height: 80px; margin-top: 20px;padding: 0; width: 100%;border: none;font-size: 10px;">
+            <h1>©️2025, Made with ❤️ by Kautilya Srivastava</h1>
+           
+                
+                <div class="box-icons">
+                    <a href="#"><i class='bx bxl-discord-alt' ></i></a>
+                    <a href="#"><i class='bx bxl-youtube' ></i></a>
+                    <a href="#"><i class='bx bxl-github' ></i></a>
+                    <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+                </div>
+          
+        </footer>
+    <!-- =======================footer end===================== -->
+
+
+    <!-- ================container end====================== -->
+</div>
+
+<!-- ================script start====================== -->
+
+
+   <script src="search.js"></script>
+   <script src="app.js"></script>
+   <script>
+    // SIGNIN PAGE OPEN AND CLOSE ANIMATION
+
+const signinButton = document.getElementById('signinButton');
+const signinPage = document.getElementById('signinPage');
+const closeIcon = document.getElementById('closeIcon');
+
+signinButton.addEventListener('click', function(){
+    signinPage.classList.remove('closeSignin');
+    signinPage.classList.add("openSignin")
+});
+
+closeIcon.addEventListener('click', function(){
+    signinPage.classList.remove("openSignin");
+    signinPage.classList.add('closeSignin');
+})
+
+
+   </script>
+   <!-- ================script end====================== -->
+
+</body>
+</html>

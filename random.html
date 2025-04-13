@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMG.COM</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+          #gallery {
+            margin-top: 10%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-container {
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- ================container start====================== -->
+    <div class="container">
+        <!-- ================header start====================== -->
+        <header>
+            <div class="head-left">
+                <img src="images/logo.png" alt="logo">
+                <h1>IMG.COM</h1>
+            </div>
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="clone.html">MAIN</a></li>
+                <li><a href="random.html">RANDOM CLICK</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <div class="head-right">
+                <a href="#">NEW ACOUNT</a>
+
+                <div class="button-box">
+                    <button id="signinButton">SIGN IN</button>
+                </div>
+            </div>
+
+            <div class="menu-icon">
+                <i class='bx bx-menu'></i>
+            </div>
+        </header>
+        <!-- ================header end====================== -->
+        <!-- ================sidebar start====================== -->
+        <div class="sidebar">
+            <div class="close-icon">
+                <i class='bx bx-x'></i>
+            </div>
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="clone.html">MAIN</a></li>
+                <li><a href="random.html">RANDOM CLICK</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <div class="social-sidebar">
+                <a href="#"><i class='bx bxl-discord-alt' ></i></a>
+                <a href="#"><i class='bx bxl-youtube' ></i></a>
+                <a href="#"><i class='bx bxl-github' ></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+            </div>
+
+            <div class="button-box">
+                <button id="signinButton">SIGN IN</button>
+            </div>
+            <!-- ================sidebar end====================== -->
+        </div>
+        <!-- ================sidebar end====================== -->
+
+        <!-- ================hero start====================== -->
+        <section class="hero">
+            <img class="hero-blur-image" src="images/hero blur img.png" alt="">
+            <img class="hero-icons-image parallax" data-speed="4" src="images/hero icons img.png" alt="">
+            <img class="hero-rings-image" src="images/hero rings icon.png" alt="">
+
+            <h1>CLICK THE RANDOM <br>BUTTON </h1>
+            
+            <button style="margin-bottom: 5%;" id="generate">Generate Random Images</button>
+            <div id="gallery"></div>
+           
+
+            <h4>Helping people search beautiful content at IMG.COM</h4>
+
+            <div class="companies-list">
+                <div class="company">
+                    <img src="images/company1.png" alt="company1">
+                    <p>Memric</p>
+                </div>
+
+                <div class="company">
+                    <img src="images/company2.png" alt="company1">
+                    <p>Ipsum</p>
+                </div>
+
+                <div class="company">
+                    <img src="images/company3.png" alt="company1">
+                    <p>IMG.COM</p>
+                </div>
+
+                <div class="company">
+                    <img src="images/company4.png" alt="company1">
+                    <p>Quanex</p>
+                </div>
+
+                <div class="company">
+                    <img src="images/company5.png" alt="company1">
+                    <p>Synthet</p>
+                </div>
+            </div>
+        </section>
+        <!-- ================hero end====================== -->
+        <!-- ================signin page start====================== -->
+        <div id="signinPage" class="signin-page-box">
+            <div class="signin-page">
+                <h1>Sign In</h1>
+                <input type="text" placeholder="User Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Password">
+                <button>Sign in</button>
+                <p>Login</p>
+                <div id="closeIcon"><i class='bx bx-x'></i></div>
+            </div>
+        </div>
+        <!-- ================signin page end====================== -->
+        <!-- ================features section start====================== -->
+        <!-- <section class="features-section">
+            <h1>Search Smarter, Not Harder. with IMG.COM</h1>
+
+            <div class="features-gradient"></div>
+
+            <div class="features-card-box">
+                <div class="features-card autoDisplay">
+                    <h2>Ask Anything</h2>
+                    <p>Lets users quickly find images to their thoughts without having to search through multiple sources.</p>
+                    <div class="explore-more">
+                        <img src="images/feature1.png" alt="">
+                        <a href="#">Explore More <i class='bx bx-link-external'></i></a>
+                    </div>
+
+                    <img class="features-back-img" src="images/features back img.png" alt="">
+                </div>
+
+                <div class="features-card autoDisplay">
+                    <h2>Improve Everyday</h2>
+                    <p>The app uses natural language processing to understand user queries and provide accurate and relevant responses.</p>
+
+                    <div class="explore-more">
+                        <img src="images/feature2.png" alt="">
+                        <a href="#">Explore More <i class='bx bx-link-external'></i></a>
+                    </div>
+
+                    <img class="features-back-img" src="images/features back img.png" alt="">
+                </div>
+
+                <div class="features-card autoDisplay">
+                    <h2>Conect Everywere</h2>
+                    <p>Connect with the AI JARVIS from anywhere, on any device, making it more accessible and convenient.</p>
+
+                    <div class="explore-more">
+                        <img src="images/feature3.png" alt="">
+                        <a href="#">Explore More <i class='bx bx-link-external'></i></a>
+                    </div>
+
+                    <img class="features-back-img" src="images/features back img.png" alt="">
+                </div>
+
+                <div class="features-card autoDisplay">
+                    <h2>Fast Responding</h2>
+                    <p>Lets users quickly find Images to their thoughts without having to search through multiple sources.</p>
+
+                    <div class="explore-more">
+                        <img src="images/feature4.png" alt="">
+                        <a href="#">Explore More <i class='bx bx-link-external'></i></a>
+                    </div>
+
+                    <img class="features-back-img" src="images/features back img.png" alt="">
+                </div>
+
+                <div class="features-card autoDisplay">
+                    <h2>Search Anything</h2>
+                    <p>Lets users quickly find Images to their thoughts without having to search through multiple sources.</p>
+
+                    <div class="explore-more">
+                        <img src="images/feature1.png" alt="">
+                        <a href="#">Explore More <i class='bx bx-link-external'></i></a>
+                    </div>
+
+                    <img class="features-back-img" src="images/features back img.png" alt="">
+                </div>
+
+                <div class="features-card autoDisplay">
+                    <h2>Search Anything</h2>
+                    <p>Lets users quickly find Images to their thoughts without having to search through multiple sources.</p>
+
+                    <div class="explore-more">
+                        <img src="images/feature1.png" alt="">
+                        <a href="#">Explore More <i class='bx bx-link-external'></i></a>
+                    </div>
+
+                    <img class="features-back-img" src="images/features back img.png" alt="">
+                </div>
+            </div>
+        </section> -->
+        <!-- ================features section end====================== -->
+
+        <!-- ================chatApp section start====================== -->
+        <!-- <section class="chatApp-section">
+            <div class="left-container">
+                <h1 class="fadeInLeft">AI Image Gallery for Users Interaction.</h1>
+                <p class="fadeInLeft"><img src="images/Check circle.png" alt=""> Users Interaction</p>
+
+                <h2 class="fadeInLeft">With smart automation and users interaction, it's the perfect solution for teams looking to work smarter.</h2>
+                
+                    <p class="fadeInLeft"><img src="images/Check circle.png" alt=""> Smart Automation</p>
+                <p class="fadeInLeft"><img src="images/Check circle.png" alt=""> Users Interaction</p>
+
+                <div class="button-box fadeInLeft">
+                    <button id="signinButton">TRY IT NOW</button>
+                </div>
+            </div>
+
+            <div class="right-container">
+                <h2 class="fadeInRight">With smart automation and Users Interaction, it's the perfect solution for teams looking to work smarter.</h2>
+                <img class="fadeInRight" src="images/tools group.png" alt="">
+            </div>
+        </section> -->
+        <!-- ================chatApp section end====================== -->
+
+        <!-- ================generative section start====================== --> 
+        <!-- <section class="generative-section">
+            <h1>Gernerative AI Image for creators</h1>
+            <p>IMG.COM unlocks the potential of AI-powerd Applications</p>
+
+            <div class="grid-box">
+                <div class="grid-card grid1 autoBlur">
+                    <img src="images/service-1.png" alt="" class="grid1-robot-img">
+                    <div class="info">
+                        <h2>Smartest AI</h2>
+                        <h4>IMG.COM unlocks the potential of AI-powered applications</h4>
+                        <p><img src="images/Check circle.png" alt=""> Photo Generating</p>
+                        <p><img src="images/Check circle.png" alt=""> Random Photo</p>
+                        <p><img src="images/Check circle.png" alt=""> Voice to Text </p>
+                    </div>
+                </div>
+
+                <div class="grid-card grid2 autoBlur">
+                    <img src="images/service-2.png" alt="">
+                    <div><h2>Hey IMG.COM, Search this photo</h2></div>
+
+                    <h1>Photo Editing</h1>
+                    <p>Automatically Search your photos using our AI app's photo Search feature. Try it now!</p>
+                    <div class=" button-box fadeInLeft" style="margin-top: 772px;">
+                        <button id="signinButton">Search Now</button>
+                    </div>
+                </div>
+
+                <div class="grid-card grid3 autoBlur">
+                    <div class="info">
+                        <h2>Image Generation</h2>
+                        <h4>The world’s most powerful AI photo generation engine. What will you Search?</h4>
+
+                        <div class="info-icons">
+                            <div class="icon">
+                                <i class='bx bxs-extension' ></i>
+                            </div>
+
+                            <div class="icon">
+                                <i class='bx bx-signal-5' ></i>
+                            </div>
+
+                            <div class="icon">
+                                <i class='bx bxs-videos' ></i>
+                            </div>
+
+                            <div class="icon">
+                                <i class='bx bx-wifi' ></i>
+                            </div>
+
+                            <div class="icon">
+                                <i class='bx bx-reset' ></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="images/service-3.png" alt="">
+                </div>
+
+                <div class="grid-card grid4 autoBlur">
+                    <img src="images/service-4.png" alt="" class="grid4-robot-img">
+                    <div class="info">
+                        <h2>Smartest AI</h2>
+                        <h4>IMG.COM unlocks the potential of AI-powered applications</h4>
+                        <p><img src="images/Check circle.png" alt=""> Text to Voice</p>
+                        <p><img src="images/Check circle.png" alt=""> Voice Enhance</p>
+                        <p><img src="images/Check circle.png" alt=""> Seamless Integration</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- ================generative section end====================== -->
+        <!-- ================pricing section start====================== -->
+        <section class="pricing-section">
+            <div class="pricing-img-box">
+                <img class="parallax" data-speed="4" src="images/pricing-parallax.png" alt="">
+               
+
+                <spline-viewer url="https://prod.spline.design/9xYFND5UehMbPs2E/scene.splinecode"></spline-viewer>
+            </div>
+
+            <h1 class="title" style="margin-top: 100px;">Pay once, use forever</h1>
+            
+            <div class="pricing-container">
+                <div class="price-box">
+                    <h1>Basic</h1>
+                    <h2>AI Image Gallery, Personalized recommendations</h2>
+                    <h3>$0</h3>
+                    <button>GET STARED</button>
+
+                    <p><img src="images/Check circle.png" alt=""> An AI Image Gallery that can understand your thoughts</p>
+
+                    <p><img src="images/Check circle.png" alt=""> An AI Voice to text converter that can understand your queries</p>
+
+                    <p><img src="images/Check circle.png" alt=""> An AI chatbot that can understand your queries</p>
+                </div>
+
+                <div class="price-box">
+                    <h1>Premium</h1>
+                    <h2>Advanced AI chatbot, priority support, analytics dashboard</h2>
+                    <h3>$9.99</h3>
+                    <button>GET STARED</button>
+
+                    <p><img src="images/Check circle.png" alt=""> An AI chatbot that can understand your queries</p>
+
+                    <p><img src="images/Check circle.png" alt=""> An AI chatbot that can understand your queries</p>
+
+                    <p><img src="images/Check circle.png" alt=""> An AI chatbot that can understand your queries</p>
+                </div>
+
+                <div class="price-box">
+                    <h1>Enterprise</h1>
+                    <h2>Custom AI chatbot, advanced analytics, dedicated account</h2>
+                    <h3>$99.99</h3>
+                    <button>GET STARED</button>
+
+                    <p><img src="images/Check circle.png" alt=""> An AI chatbot that can understand your queries</p>
+
+                    <p><img src="images/Check circle.png" alt=""> An AI chatbot that can understand your queries</p>
+
+                    <p><img src="images/Check circle.png" alt=""> An AI chatbot that can understand your queries</p>
+                </div>
+            </div>
+            <!-- <a href="#">SEE THE FULL DETAILS</a> -->
+        </section>
+        <!-- ================pricing section end====================== -->
+        <!-- ================roadmap section start====================== -->
+        <!-- <section class="roadmap-section">
+            <h1>What we're working on</h1>
+
+            <div class="roadmap-cards-box">
+                <div class="roadmap-card autoBlur">
+                    <img src="images/roadmap-1.png" alt="">
+                    <h2>Voice to Text converter</h2>
+                    <p>Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.</p>
+                </div>
+
+                <div class="roadmap-card autoBlur" >
+                    <img src="images/roadmap-2.png" alt="">
+                    <h2>Voice Recognition</h2>
+                    <p>Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.</p>
+                </div>
+
+                <div class="roadmap-card autoBlur">
+                    <img src="images/roadmap-3.png" alt="">
+                    <h2>Text to Voice</h2>
+                    <p>Enable the chatbot to understand and respond to Text to Voice commands, making it easier for users to interact with the app write to speech.</p>
+                </div>
+
+                <div class="roadmap-card autoBlur">
+                    <img src="images/roadmap-4.png" alt="">
+                    <h2>Voice to Text converter</h2>
+                    <p>Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.</p>
+                </div>
+            </div>
+
+            <div class="button-box">
+                <a href="clone.html"><button>Search Your Image</button></a>
+            </div>
+
+            <div class="roadmap-gradient"></div>
+        </section> -->
+        <!-- ================roadmap section end====================== -->
+        <!-- ================footer start====================== -->
+        <footer>
+            <h1 >©️2025, Made with ❤️ by Kautilya Srivastava</h1>
+            <div class="box-icons">
+                <a href="#"><i class='bx bxl-discord-alt' ></i></a>
+                <a href="#"><i class='bx bxl-youtube' ></i></a>
+                <a href="#"><i class='bx bxl-github' ></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+            </div>
+        </footer>
+        <!-- ================footer end====================== -->   
+        
+
+    </div>
+    <!-- ================container end====================== -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        const gallery = document.getElementById('gallery');
+        const generateButton = document.getElementById('generate');
+
+        generateButton.addEventListener('click', async () => {
+            const images = await generateRandomImages(15);
+            displayImages(images);
+        });
+
+        async function generateRandomImages(count) {
+            const response = await fetch(`https://api.unsplash.com/photos/random?count=${count}&client_id=OezXcG4gd-BiEPl84da9I1fq_DlXR-aZPzdCit5aZpQ`);
+            const data = await response.json();
+            return data.map(image => image.urls.small);
+        }
+
+        function displayImages(images) {
+            gallery.innerHTML = '';
+            images.forEach(url => {
+                const container = document.createElement('div');
+                container.className = 'image-container';
+                const img = document.createElement('img');
+                img.src = url;
+                container.appendChild(img);
+                gallery.appendChild(container);
+            });
+        }
+    </script>
+</body>
+</html>
